@@ -1,0 +1,419 @@
+body{
+    margin: 0 ;
+    background-color: rgb(33, 12, 43);
+} 
+
+
+/*Video*/
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+    z-index: 1;
+}
+
+.video_media{
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.videoIBox{
+      display: flex;
+      justify-content: center;
+      padding-top: 10%;
+      margin-bottom: 10px;
+
+}
+
+.videoI{
+    width:70%;
+    height: auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+
+    top: 0;
+    left: 0;
+}
+
+
+/*Intro*/
+
+.intro{
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.intro2{
+    overflow: hidden;
+}
+
+.intro::after{
+    position: absolute;
+
+    content: "";
+    display:block;
+
+    width: 100%;
+    height: 100%;
+    background-color:rgba(38, 9, 61, 0.7);
+
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+}
+
+.intro_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+     
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.intro_title{
+    margin-top: auto;
+    padding-top: 5%;
+    overflow-y: auto;
+
+    size: 64px;
+    color: rgb(255, 242, 223);
+    font-size: 5em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+
+    text-align: center;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin:auto auto;
+}
+
+/*UL*/
+
+.ul_links{
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 50px auto;
+    
+}
+
+.ul_li_a{
+    color: aliceblue;
+    text-decoration: none;
+    margin:0 auto;
+}
+
+.an{
+    transition: color 0.2s linear;
+    position: relative;
+}
+.an::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+
+    background-color:rgb(135, 67, 245);
+    
+    top:100%;
+    left: 0;
+    position: absolute;
+    z-index: 3;
+
+    transition: opacity 0.2s;
+}
+
+.an:hover::after{
+    opacity: 1;
+}
+
+.an:hover{
+    color:rgb(135, 67, 245);
+}
+
+@media (max-width: 945px){
+    .ul_links{
+        flex-direction: column;
+    }
+
+    .ul_li_a{
+        width: 90%;
+        text-align: center;
+        margin: 35px;
+    }
+
+    .intro_title{
+        font-size: 64px;
+        text-align:center
+    }
+}
+
+@media (max-width: 815px){
+    .ul_links{
+        flex-direction: column;
+    }
+
+    .ul_li_a{
+        width: 78%;
+        text-align: center;
+        margin: 25px;
+        font-size: 10px;
+    }
+
+    .intro_title{
+        font-size: 28px;
+        text-align:center
+    }
+}
+
+@media (max-width: 540px){
+    .ul_links{
+        flex-direction: column;
+    }
+
+    .ul_li_a{
+        width: 78%;
+        text-align: center;
+        font-size: 10px;
+        margin: 25px;
+    }
+
+    .intro_title{
+        font-size: 24px;
+        text-align:center
+    }
+}
+
+@media (max-width: 290px){
+    .ul_links{
+        flex-direction: column;
+    }
+
+    .ul_li_a{
+        width: 60%;
+        text-align: center;
+        font-size: 7px;
+    }
+
+    .intro_title{
+        font-size: 15px;
+        text-align:center
+    }
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    text-align: center;
+    font-size: 2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+/*Footer*/
+.footer{
+    padding:20px;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer{
+    margin-top: auto;
+}
+
+.foooterContainer {
+    width: 100%;
+    padding: auto auto auto;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: left;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: aliceblue;
+    margin: 5px;
+    border-radius: 25%;
+}
+
+.socialIcons a i {
+    font-size: 64px;
+    color: brown;
+    opacity: 0.9;
+
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: beige;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: auto 0;
+
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+@media (max-width: 815px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a i{
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 470px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a i{
+        font-size: 32px;
+    }
+
+    .socialIcons a{
+        padding: 2px 2px;
+    }
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Card*/
+
+.card{
+    max-width: 300px;
+    margin: 20px auto;
+    max-height: 100%;
+    overflow-y: auto;
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+.card_header{
+    height: 200px;
+    
+    background-color: #ccc;
+}
+
+.card_header img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.card_content{
+    padding: 15px;
+}
+
+.card_title{
+    margin: 0 0 15px;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.card_text{
+    color: aliceblue;
+}
+
+/*List*/
+.list{
+    display: grid;
+    padding-top: 8.5%;
+    grid-template-columns: repeat(3,2fr);
+    gap: 20px;
+    list-style-type: none;
+
+}
+
+.list-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+@media(max-width: 1000px){
+    .list{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 710px){
+    .list{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
